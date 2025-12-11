@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AF – Soluciones Profesionales</title>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', sans-serif; background: #f5f5f5; color: #333; }
+
+        /* HEADER */
+        header {
+            position: fixed; top: 0; left: 0; width: 100%;
+            background: #111; color: white;
+            padding: 18px 40px;
+            display: flex; justify-content: space-between; align-items: center;
+            z-index: 1000;
+        }
+        header h1 { font-size: 26px; letter-spacing: 2px; font-weight: bold; }
+
+        nav a {
+            margin-left: 25px; color: #fff; font-weight: 500;
+            transition: .3s; text-decoration: none;
+        }
+        nav a:hover { color: #0db7ff; }
+
+        /* HERO */
+        .hero {
+            margin-top: 90px;
+            height: 85vh;
+            background: url('https://images.unsplash.com/photo-1521790945508-bf2a36314e85?q=80&w=1600') center/cover no-repeat;
+            display: flex; align-items: center; justify-content: center;
+            text-align: center; color: white; padding: 20px;
+        }
+        .hero h2 { font-size: 48px; text-shadow: 2px 2px 8px black; }
+        .hero p { font-size: 20px; margin-top: 15px; }
+        .hero button {
+            margin-top: 25px; padding: 13px 35px;
+            background: #0db7ff; border: none; color: white;
+            font-size: 18px; border-radius: 5px; cursor: pointer;
+            transition: .3s;
+        }
+        .hero button:hover { background: #028ac1; }
+
+        /* SECTIONS */
+        section { max-width: 1200px; margin: 70px auto; padding: 20px; }
+        h2.section-title {
+            text-align: center; font-size: 34px;
+            color: #0db7ff; margin-bottom: 40px;
+            font-weight: bold;
+        }
+
+        /* SERVICES */
+        .services {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        .service-card {
+            background: white; padding: 25px; border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: .3s;
+        }
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 5px 18px rgba(0,0,0,0.15);
+        }
+        .service-card h3 { color: #0db7ff; margin-bottom: 10px; }
+
+        /* ABOUT */
+        #about p { font-size: 18px; line-height: 1.7; text-align: justify; }
+
+        /* CONTACT FORM */
+        form {
+            background: white; padding: 30px; border-radius: 10px;
+            max-width: 600px; margin: 0 auto;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        form input, form textarea {
+            width: 100%; padding: 12px; margin: 10px 0;
+            border-radius: 6px; font-size: 16px; border: 1px solid #ccc;
+        }
+        form button {
+            width: 100%; padding: 12px; border: none;
+            background: #111; color: white; font-size: 18px;
+            border-radius: 6px; cursor: pointer; transition: .3s;
+        }
+        form button:hover { background: #0db7ff; }
+
+        /* FOOTER */
+        footer {
+            background: #111; color: white; text-align: center;
+            padding: 25px; margin-top: 40px;
+        }
+    </style>
+
+    <script>
+        function enviarFormulario(event) {
+            event.preventDefault();
+            alert("Gracias por comunicarte con AF. Te responderemos pronto.");
+        }
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <h1>AF</h1>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#about">Nosotros</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <div class="hero" id="inicio">
+        <div>
+            <h2>AF – Innovación y Soluciones Profesionales</h2>
+            <p>Impulsamos empresas con estrategia, tecnología y resultados reales.</p>
+            <button onclick="window.location='#contacto'">Contáctanos</button>
+        </div>
+    </div>
+
+    <!-- SERVICES -->
+    <section id="servicios">
+        <h2 class="section-title">Servicios AF</h2>
+        <div class="services">
+
+            <div class="service-card">
+                <h3>Consultoría Empresarial</h3>
+                <p>Planificación estratégica, análisis de negocios y optimización de procesos.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Soluciones Digitales</h3>
+                <p>Desarrollo web, automatización, sistemas empresariales y tecnología avanzada.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Marketing & Branding</h3>
+                <p>Posicionamiento digital, gestión de marca y campañas profesionales.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Capacitación Corporativa</h3>
+                <p>Entrenamiento especializado para equipos, líderes y áreas comerciales.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <h2 class="section-title">Quiénes Somos</h2>
+        <p>
+            En <strong>AF</strong> trabajamos con empresas que buscan crecer, optimizar y destacar.
+            Combinamos experiencia empresarial, estrategia moderna y herramientas tecnológicas
+            para entregar soluciones reales que generan impacto.
+        </p>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contacto">
+        <h2 class="section-title">Contacto</h2>
+        <form onsubmit="enviarFormulario(event)">
+            <input type="text" placeholder="Nombre completo" required>
+            <input type="email" placeholder="Correo electrónico" required>
+            <textarea rows="5" placeholder="Tu mensaje" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        © 2025 AF | Todos los derechos reservados
+    </footer>
+
+</body>
+</html>
